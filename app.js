@@ -2,8 +2,8 @@
 // 1) CONFIGURAÇÃO — troque pelos dados do SEU projeto Supabase
 // (Painel do Supabase > Project Settings > API)
 // ============================================================
-const SUPABASE_URL = "https://dtxjpmfkhpkffipafhmh.supabase.co/rest/v1/";
-const SUPABASE_ANON_KEY = "sb_publishable_VFOHeBVDk1dfjSgmu2bLYA_QMjKgC0S";
+const SUPABASE_URL = "https://dtxjpmfkhpkffipafhmh.supabase.co/rest/v1";
+const SUPABASE_ANON_KEY = "sb_publishable_meFoU1eoDCYfqD9QAaoU0g_lBHf49Nv";
 
 // As duas únicas contas que podem usar o site.
 // Crie esses dois usuários em: Authentication > Users > Add user.
