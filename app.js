@@ -8,8 +8,8 @@ const SUPABASE_ANON_KEY = "sb_publishable_VFOHeBVDk1dfjSgmu2bLYA_QMjKgC0S";
 // As duas únicas contas que podem usar o site.
 // Crie esses dois usuários em: Authentication > Users > Add user.
 const CONTAS = {
-  "seu-email@exemplo.com": "você",
-  "email-dela@exemplo.com": "ela"
+  "pedro@carta.com": "você",
+  "luisa@carta.com": "ela"
 };
 
 // ============================================================
