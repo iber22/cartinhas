@@ -2,7 +2,7 @@
 // 1) CONFIGURAÇÃO — troque pelos dados do SEU projeto Supabase
 // (Painel do Supabase > Project Settings > API)
 // ============================================================
-const SUPABASE_URL = "https://dtxjpmfkhpkffipafhmh.supabase.co/rest/v1";
+const SUPABASE_URL = "https://dtxjpmfkhpkffipafhmh.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_meFoU1eoDCYfqD9QAaoU0g_lBHf49Nv";
 
 // As duas únicas contas que podem usar o site.
