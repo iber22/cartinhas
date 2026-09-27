@@ -1,0 +1,268 @@
+:root {
+  --papel: #efe4d2;
+  --papel-carta: #faf3e4;
+  --tinta: #2f2a26;
+  --vinho: #7a2e3b;
+  --vinho-escuro: #5c2029;
+  --dourado: #b4893f;
+  --linha: rgba(47, 42, 38, 0.15);
+  font-size: 17px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "Karla", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(47,42,38,0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.6;
+}
+
+h1, h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.view { width: 100%; max-width: 440px; }
+
+/* ---------- LOGIN ---------- */
+.login-view {
+  background: var(--papel-carta);
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 48px 36px;
+  text-align: center;
+  box-shadow: 0 24px 48px -24px rgba(47, 42, 38, 0.35);
+}
+
+.seal { font-size: 2.4rem; margin-bottom: 4px; }
+
+.login-view h1 {
+  font-size: 2.4rem;
+  color: var(--vinho-escuro);
+}
+
+.subtitle {
+  margin: 8px 0 28px;
+  font-size: 0.95rem;
+  color: rgba(47,42,38,0.65);
+  font-style: italic;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+label span {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+  color: rgba(47,42,38,0.7);
+}
+
+input, textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 11px 13px;
+  border: 1px solid var(--linha);
+  border-radius: 3px;
+  background: #fffdf9;
+  color: var(--tinta);
+}
+
+input:focus, textarea:focus, button:focus-visible {
+  outline: 2px solid var(--dourado);
+  outline-offset: 1px;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.login-form button, .write-form button {
+  margin-top: 6px;
+  background: var(--vinho);
+  color: #fdf6ee;
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: background 0.15s ease;
+}
+
+.login-form button:hover, .write-form button:hover { background: var(--vinho-escuro); }
+
+.erro {
+  color: var(--vinho-escuro);
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+}
+
+/* ---------- APP ---------- */
+.app-view { max-width: 480px; }
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 20px;
+  font-size: 0.9rem;
+  color: rgba(47,42,38,0.75);
+}
+
+.link-btn {
+  background: none;
+  color: var(--vinho);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* menu */
+.menu-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-btn {
+  background: var(--papel-carta);
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 26px 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 14px 28px -20px rgba(47,42,38,0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -18px rgba(47,42,38,0.45);
+}
+
+.card-icone { font-size: 1.6rem; }
+
+.card-titulo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  color: var(--vinho-escuro);
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: rgba(47,42,38,0.6);
+}
+
+/* escrever / listar */
+.voltar {
+  background: none;
+  color: rgba(47,42,38,0.7);
+  font-size: 0.85rem;
+  padding: 0 0 16px;
+}
+
+.write-view h2, .letters-view h2 {
+  font-size: 1.8rem;
+  color: var(--vinho-escuro);
+  margin-bottom: 18px;
+}
+
+.write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+textarea { resize: vertical; font-family: "Cormorant Garamond", serif; font-size: 1.15rem; line-height: 1.5; }
+
+.confirmacao {
+  color: var(--vinho-escuro);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.vazio {
+  color: rgba(47,42,38,0.6);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.letters-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carta {
+  background: var(--papel-carta);
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+.carta-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.carta-titulo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  color: var(--vinho-escuro);
+}
+
+.carta-data {
+  font-size: 0.75rem;
+  color: rgba(47,42,38,0.55);
+  white-space: nowrap;
+}
+
+.carta-nao-lida .carta-titulo::before {
+  content: "● ";
+  color: var(--vinho);
+  font-size: 0.6rem;
+}
+
+.carta-texto {
+  margin-top: 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  display: none;
+}
+
+.carta.aberta .carta-texto { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-btn { transition: none; }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartinhas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="paper-texture"></div>
+
+  <!-- TELA DE LOGIN -->
+  <main id="login-view" class="view login-view">
+    <div class="seal">💌</div>
+    <h1>cartinhas</h1>
+    <p class="subtitle">um lugar só nosso para trocar palavras</p>
+
+    <form id="login-form" class="login-form">
+      <label>
+        <span>e-mail</span>
+        <input type="email" id="login-email" required autocomplete="username">
+      </label>
+      <label>
+        <span>senha</span>
+        <input type="password" id="login-password" required autocomplete="current-password">
+      </label>
+      <button type="submit">entrar</button>
+      <p id="login-erro" class="erro" hidden></p>
+    </form>
+  </main>
+
+  <!-- APP (logado) -->
+  <div id="app-view" class="view app-view" hidden>
+    <header class="topo">
+      <span id="saudacao"></span>
+      <button id="btn-logout" class="link-btn">sair</button>
+    </header>
+
+    <!-- MENU PRINCIPAL -->
+    <section id="menu-view" class="menu-view">
+      <button id="btn-escrever" class="card-btn">
+        <span class="card-icone">✍️</span>
+        <span class="card-titulo">escrever cartinha</span>
+        <span class="card-desc">conte o que estiver sentindo</span>
+      </button>
+      <button id="btn-minhas" class="card-btn">
+        <span class="card-icone">📬</span>
+        <span class="card-titulo">minhas cartinhas</span>
+        <span class="card-desc">o que ela deixou pra você</span>
+      </button>
+    </section>
+
+    <!-- ESCREVER CARTINHA -->
+    <section id="write-view" class="write-view" hidden>
+      <button class="voltar" data-voltar>← voltar</button>
+      <h2>escrever uma cartinha</h2>
+      <form id="write-form" class="write-form">
+        <label>
+          <span>título (opcional)</span>
+          <input type="text" id="write-titulo" maxlength="80" placeholder="pra um dia difícil...">
+        </label>
+        <label>
+          <span>sua cartinha</span>
+          <textarea id="write-texto" rows="10" required placeholder="era uma vez..."></textarea>
+        </label>
+        <button type="submit">selar e enviar</button>
+        <p id="write-confirmacao" class="confirmacao" hidden>cartinha enviada 💌</p>
+      </form>
+    </section>
+
+    <!-- MINHAS CARTINHAS -->
+    <section id="letters-view" class="letters-view" hidden>
+      <button class="voltar" data-voltar>← voltar</button>
+      <h2>minhas cartinhas</h2>
+      <p id="letters-vazio" class="vazio" hidden>ainda não chegou nenhuma carta por aqui.</p>
+      <div id="letters-lista" class="letters-lista"></div>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
